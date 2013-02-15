@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Balmain &amp; Balmain<%= page_name() %></title>
+
+
+  <%= stylesheet_link_tag 'screen', :media => "screen, projection" %>
+  <!--[if IE]>
+    <%= stylesheet_link_tag 'ie', :media => "screen, projection" %>
+  <![endif]-->
+  <%= stylesheet_link_tag 'main', :media => "all" %>
+  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" %>
+	<%= javascript_include_tag "jquery.flow.1.0.js" %>
+	<%= javascript_include_tag "application.js" %>
+
+</head>
+
+<body>
+
+    <div>
+      <div id='page'>
+        <div class='container' id='wrapper'>
+          <h1 id='general-header'>Balmain &amp; Balmain<%= page_name() %></h1>
+          <div class='phone_nos standard_nos'>
+            Charlton Horethorne: 01963 220247<br/>
+            Marlborough: 01672 870 414
+          </div>
+
+          <%= render :partial => "shared/menu" %>
+
+          <div class='content prepend-1 span-22 last'>
+            <%= yield :layout %>
+          </div>
+          <div class='clear'></div>
+          <!-- = partial('_carousel') -->
+          <div class='push'></div>
+        </div><!-- End: container -->
+        <%= render(:partial => 'shared/footer') -%>
+
+      </div><!-- End: page -->
+    </div><!-- End: wrapper -->
+
+    <!-- GoogleAnalytics -->
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker("UA-11370325-1");
+    pageTracker._trackPageview();
+    } catch(err) {}</script>
+
+  </body>
+</html>

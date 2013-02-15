@@ -1,0 +1,18 @@
+Dear Balmain Contact Team!
+=========================
+
+The following user has registered their details on the BalmainAndBalmain.com web site.
+
+Name:  <%= @visitor.name %><br/>
+Email:  <a href="mailto:<%= @visitor.email %>"><%= @visitor.email %></a><br/>
+Telephone:  <%= @visitor.telephone %><br/>
+Postcode:  <%= @visitor.postcode %>
+
+Referral Information:<br/>
+<%= @visitor.heard_from %>
+
+<%= @visitor.message %>
+
+This is an automated email response.<br/>
+Thanks.
+

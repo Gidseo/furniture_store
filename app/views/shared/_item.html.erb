@@ -1,0 +1,12 @@
+
+      <li>
+        <dl>
+          <dt><%= link_to(item.shape.capitalize, item) %></dt>
+          <dd>
+            <%= link_to truncate(item.description, :length => 35), item %>
+          </dd>
+          <dd>
+            <%= link_to(image_tag(image_path(img_name_determiner(item.img, "thumb")), :alt=>item.name, :class=>'thumb', :title=>item.name), item) %>
+          </dd>
+        </dl>
+      </li>

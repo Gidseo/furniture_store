@@ -1,0 +1,9 @@
+
+
+    <div class="span-20 last">
+      <h3>Alternatives in this <%= @furnishing.shape.capitalize %> Range</h3>
+      <ul class="ranges">
+        <%= render :partial=>'shared/range', :collection=>range %>
+      </ul>
+    </div>
+    <div class="clear"></div>

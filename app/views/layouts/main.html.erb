@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  	<title>Balmain &amp; Balmain<%= page_name() %></title>
+
+
+    <%= stylesheet_link_tag 'screen', :media => "screen, projection" %>
+    <%= stylesheet_link_tag 'print', :media => "print" %>
+    <!--[if IE]>
+      <%= stylesheet_link_tag 'ie', :media => "screen, projection" %>
+    <![endif]-->
+    <%= stylesheet_link_tag 'main', :media => "all" %>
+    <%= stylesheet_link_tag 'nivo-slider', :media => "screen" %>
+  	<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" %>
+  	<%= javascript_include_tag "jquery.nivo.slider.js" %>
+  	<%= javascript_include_tag "jquery.flow.1.0.js" %>
+  	<%= javascript_include_tag "application.js" %>
+
+
+  </head>
+
+  <body>
+    <div id='page'>
+      <div class='container' id='wrapper'>
+        <div id="slider" class="nivoSlider">
+          <%= image_tag(image_path("site_balmain3.jpg")) %>
+          <%= image_tag(image_path("site_balmainavon3.jpg")) %>
+          <%= image_tag(image_path("site_balmainfrome.jpg")) %>
+          <%= image_tag(image_path("site_balmain6.jpg")) %>
+        </div>
+        <%= image_tag(image_path("banner-menu.jpg"), {:alt=>'', :class=>'banner'}) %>
+        <div class='phone_nos'>
+          Charlton Horethorne: 01963 220247<br/>
+          Marlborough: 01672 870 414
+        </div>
+        <%= render :partial => "shared/menu" %>
+
+        <div class='content prepend-1 span-22 last'>
+          <%= yield :layout %>
+        </div>
+        <div class='clear'></div>
+        <div class='push'></div>
+      </div><!-- End: container -->
+
+      <%= render(:partial => 'shared/footer') -%>
+
+    </div><!-- End: page -->
+
+    <!-- GoogleAnalytics -->
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker("UA-11370325-1");
+    pageTracker._trackPageview();
+    } catch(err) {}</script>
+
+  </body>
+</html>

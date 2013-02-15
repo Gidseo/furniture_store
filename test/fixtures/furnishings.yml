@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  img: MyString
+  dimensions_description: MyText
+  name: MyString
+  description: MyText
+  alter: MyString
+  shape: MyString
+  seats: 1.5
+  is_main: false
+
+two:
+  img: MyString
+  dimensions_description: MyText
+  name: MyString
+  description: MyText
+  alter: MyString
+  shape: MyString
+  seats: 1.5
+  is_main: false

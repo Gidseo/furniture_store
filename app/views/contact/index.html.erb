@@ -1,0 +1,111 @@
+
+<h2>Contact Us</h2>
+<p>
+    Please contact us for more information and to make a quote, we would be <strong>delighted</strong> to hear from you.<br/>
+    <strong>Please Note:</strong> We are <strong>not</strong> a mail order company, we make bespoke handmade furniture.
+  </p>
+<h3 class="prepend-2">Balmain &amp; Balmain Contact Information.</h3>
+
+<div class='col prepend-2 span-9 append-2'>
+  <div class="clear"></div>
+
+  <%- if notice %>
+  <p class="notice"><%= notice %></p>
+  <%- end %>
+
+  <%= form_for(@visitor, :url => { :action => "create" }) do |f| %>
+    <%= @visitor.errors.full_messages.first if @visitor.errors.any? %>
+    <span class='validate'></span>
+    <br />
+    <div class='span-3'>
+      <%= f.label(:name, "*Name: ") %>
+    </div>
+    <div class='span-6 last'>
+      <%= f.text_field :name %><br/>
+    </div>
+    <div class='clear'></div>
+    <div class='span-3'>
+      <%= f.label(:email, "*Email: ") %>
+    </div>
+    <div class='span-6 last'>
+      <%= f.text_field :email %><br/>
+    </div>
+    <div class='clear'></div>
+    <div class='span-3'>
+      <%= f.label(:telephone, "Telephone: ") %>
+    </div>
+    <div class='span-6 last'>
+      <%= f.text_field :telephone %><br/>
+    </div>
+    <div class='clear'></div>
+    <div class='span-3'>
+      <%= f.label(:postcode, "Postcode: ") %>
+    </div>
+    <div class='span-6 last'>
+      <%= f.text_field :postcode %><br/>
+    </div>
+    <div class='clear'></div>
+  
+    <div class='span-8 last'>
+      <span class="small">* required fields</span>
+      <br />
+      <p>How did you hear about Balmain &amp; Balmain?</p>
+      <%= f.radio_button :heard_from, "referral" %>
+      <%= f.label("heard_from_referral", "Referral") %>
+      <br />
+      <%= f.radio_button :heard_from, "magazine" %>
+      <%= f.label("heard_from_magazine", "Magazine Advert") %>
+      <br />
+      <%= f.radio_button :heard_from, "advertisement" %>
+      <%= f.label("heard_from_advertisement", "Advertisement") %>
+      <br />
+      <%= f.radio_button :heard_from, "search" %>
+      <%= f.label("heard_from_search", "Internet Search Engine") %>
+      <br />
+      <%= f.radio_button :heard_from, "other" %>
+      <%= f.label("heard_from_other", "Other") %>
+      <br />
+      <br />
+      <p>
+        <%= f.label(:message, "Message:") %><br/>
+        <%= f.text_area :message %>
+      </p>
+    </div>
+    <div class='clear'></div>
+    <div class='right prepend-7 span-2 last'>
+      <%= submit_tag 'Submit', {:class=>'button'} %>
+    </div>
+    <div class='clear'></div>
+  <% end %>
+</div>
+
+<div class='contact col span-7 last'>
+  <br/>
+  <br/>
+  <address>
+    Balmain &amp; Balmain<br/>
+    Charlton Horethorne<br/>
+    Dorset<br/>
+    United Kingdom<br/>
+    DT9 4NG
+  </address>
+  <ul>
+    <li>Tel: +44(0)1963 220247</li>
+    <li>Fax: +44(0)1963 220580</li>
+    <li><%= mail_to "mail@balmainandbalmain.com", "mail@balmainandbalmain.com", :encode => "hex" %></li>
+  </ul>
+  
+  <br/>
+  <address>
+    Balmain &amp; Balmain<br/>
+    Wilton<br/>
+    Marlborough<br/>
+    Wiltshire<br/>
+    United Kingdom<br/>
+    SN8 3SP
+  </address>
+  <ul>
+    <li>Tel: +44(0)1672 870414</li>
+  </ul>
+  
+</div>

@@ -1,0 +1,469 @@
+/* @override 
+	http://localhost:3000/stylesheets/main.css?1321721829
+	http://localhost:3000/stylesheets/main.css?1322000201
+	http://localhost:3000/stylesheets/main.css?1326840966
+	http://localhost:3000/stylesheets/main.css?1326926908
+	http://localhost:3000/stylesheets/main.css?1326932762
+*/
+
+/* 
+	Balmain and Balmain
+	By B. F. B. Emson Esq.
+	May 2009
+*/
+
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%; /* needed for sticky footer */
+	/* background: white url("/assets/bg2.jpg") repeat; */
+	background-color: #f0efef;
+	/*color: #636a6a; grey*/
+	color: #103f76;
+	font: 1em "Helvetica neu", "helvetica";
+}
+
+a, a:link, a:link:after, a:visited:after {
+	color: #757163;
+}
+
+a:hover {
+	/*color: #74ACD1;*/
+	text-decoration: none;
+}
+
+h2 {
+	font-size: 1.7em;
+	letter-spacing: 0.01em;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 1.4em;
+	letter-spacing: 0.01em;
+}
+
+
+h1, h2, h3, h4 {
+	color: #103f76;
+	margin: 0;
+}
+
+
+
+h2, h3 {
+	padding: 0 0 10px 0;
+}
+
+.section {
+	padding: 0 0 15px 0;
+}
+
+.section h1 {
+	font-size: 2.5em;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.background-img {
+	display: block;
+	width: 950px;
+	height: 728px;
+	margin-bottom: 0;
+	background: url(/assets/hamble-george-45-faded.jpg) no-repeat 0 0;
+}
+
+
+/* Nivo slider */
+.nivoSlider {
+    position:relative;
+    width:950px; /* Change this to your images width */
+    height:423px; /* Change this to your images height */
+    background:url(/assets/loading.gif) no-repeat 50% 50%;
+}
+.nivoSlider img {
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+}
+.nivoSlider a {
+    border:0;
+    display:block;
+}
+
+/* jFlow Carousel */ 
+
+.center {
+	text-align: center;
+}
+
+span.jFlowControl {
+	padding-right: 30px;
+}
+
+.jFlowControl, .jFlowPrev, .jFlowNext{
+	text-decoration: underline;
+	padding-right: 20px;
+	cursor:pointer;
+	color: #757163;
+}
+
+
+
+.jFlowControl:hover, .jFlowPrev:hover, .jFlowNext:hover{
+	text-decoration: none;
+}
+
+.carousel {
+	border: 1px solid black;
+	margin: 10px 0;
+	padding: 10px 0 0 0px;
+	/*background: url(../images/carousel-bkgd.gif) no-repeat 0 0;*/
+}
+
+.pad {
+	padding: 0 0 0 10px;
+}
+
+/* Menu */
+
+
+.menu {
+	position: relative;
+	top: -57px;
+	margin: 0 0 0 0;
+	padding: 0 50px 0 0;
+	text-align: right;
+	font-size: 1.2em;
+}
+
+.phone_nos {
+	position: absolute;
+	top: 434px;
+	margin: 0 0 0 0;
+	padding: 0 0 0 50px;
+	text-align: left;
+	font-size: 0.8em;
+	color: white;
+}
+
+.standard_nos {
+	top: 96px;
+}
+
+
+.menu a, .menu a:link, .menu a:link:after, .menu a:visited:after {
+	color: white;
+	text-decoration: none;
+}
+
+.menu a:hover {
+	color: #c0b9a6;
+	text-decoration: none;
+}
+
+ul.menu li {
+	padding: 12px;
+	display: inline;
+}
+
+.active {
+	color: #c0b9a6;
+	/*color: #f7edd3;*/
+}
+
+
+
+
+
+/* Page */
+
+
+#wrapper {
+	background-color: #f7edd2;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -192px; /* the bottom margin is the negative value of the footer's height */
+}
+
+.simple_wrapper { 
+	background-color: white;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -192px; /* the bottom margin is the negative value of the footer's height */
+}
+
+h1#logo {
+	display: block;
+	width: 950px;
+	height: 423px;
+	text-indent: -9999px;
+	background: url(/assets/site_balmain3.jpg) no-repeat 0 0;
+	margin-bottom: 0;
+}
+
+h1#general-header {
+	display: block;
+	width: 950px;
+	height: 150px;
+	text-indent: -9999px;
+	background: url(/assets/general-header-no-logo.jpg) no-repeat 0 0;
+	margin-bottom: 0;
+}
+
+
+.content {
+}
+
+
+p.mission {
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+.email {
+	text-transform: lowercase;
+}
+
+
+/* Images */
+
+.mainimg {
+	margin: 20px 0 20px 0;
+}
+
+.border {
+	border: 1px solid black;
+}
+
+
+.inform {
+	text-align: center;
+	font-size: 0.8em;
+	font-style: italic;
+}
+
+/* Gallery */
+
+#subcontent {
+  padding: 10px 12px 25px 12px;
+}
+
+.row {
+	padding: 10px 0;
+}
+
+
+
+
+ul.features {
+	list-style: none;
+	display: inline;
+}
+
+.features li {
+	display: inline;
+	float: left;
+	width: 21%;
+	height: 250px;
+	padding-right: 30px;
+}
+
+ul.ranges {
+	list-style: none;
+	display: inline;
+}
+
+.ranges li {
+	display: inline;
+	float: left;
+	width: 21%;
+	height: 200px;
+	padding-right: 30px;
+}
+
+dd {
+	padding: 0;
+	margin: 0;
+}
+
+.features li a {
+	color: #103f76;
+	text-decoration: none;
+}
+
+.features li a:hover {
+	color: #4e4c40;
+	text-decoration: underline;
+}
+
+a img.thumb {
+	border: 1px solid #103f76;
+}
+
+a:hover img.thumb {
+	border: 1px solid white;
+}
+
+.thumb {
+	margin: 10px 0;
+}
+
+.left {float: left;}
+.right {float: right;}
+.inline {display: inline;}
+
+/* Zoom */
+
+div.jqZoomTitle {
+	z-index:5000;
+	text-align:center;
+	font-size:11px;
+	font-family:Tahoma;
+	height:16px;
+	padding-top:2px;
+	position:absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	color: #FFF;
+	background: #66654c;
+}
+
+.jqZoomPup {
+	overflow:hidden;
+	background-color: #FFF;
+	-moz-opacity:0.6;
+	opacity: 0.6;
+	filter: alpha(opacity = 60);
+	z-index:10;
+	border-color:#c4c4c4;
+	border-style: solid;
+	cursor: crosshair;
+}
+
+.jqZoomPup img {
+	border: 0px;
+}
+
+.preload {
+	-moz-opacity:0.8;
+	opacity: 0.8;
+	filter: alpha(opacity = 80);
+	color: #333;
+	font-size: 12px;
+	font-family: Tahoma;
+	text-decoration: none;
+	border: 1px solid #CCC;
+	background-color: white;
+	padding: 8px;
+	text-align:center;
+	background-image: url(../images/zoomloader.gif);
+	background-repeat: no-repeat;
+	background-position: 43px 30px;
+	width:90px;
+	* width:100px;
+	height:43px;
+	*height:55px;
+	z-index:10;
+	position:absolute;
+	top:3px;
+	left:3px;
+}
+
+.jqZoomWindow {
+	border: 1px solid #66654c;
+	background-color: #FFF;
+}
+
+img.gallery {
+	border: 1px solid #66654c;
+}
+
+
+/* Contact Form */
+
+
+#formname, #formemail, #formphone, #formothermsg {
+	background-color: #d2d4d3;
+	width: 220px;
+}
+
+#formothermsg {
+	margin-left: 18px;
+}
+
+textarea {
+	width:330px;
+	height:80px;
+	padding:5px;
+}
+
+.validate {
+	color: red;
+	font-style: italic;
+	font-size: 0.9em;
+}
+
+.notice {
+  color: green;
+}
+
+/*.col address {
+	font-style: normal;
+	text-align: right;
+}*/
+
+.contact {
+	text-align: right;
+}
+
+.contact ul {
+	list-style: none;
+	margin: 0;
+}
+
+.breadcrumb {
+	color: #877163;
+}
+
+/* Footer */
+
+.push {
+	height: 192px; /* .push must be the same height as .footer */
+}
+
+
+#topFooter {
+	height: 420px;
+	/*background-color: #606361;*/
+	/*background: url(../images/pre_footer.gif) 0 0;*/
+}
+
+#footer {
+	height: 192px; /* .push must be the same height as .footer */
+}
+
+#footer .container {
+	height: 127px;
+	font-size: 0.8em;
+	padding: 80px 0 0 0;
+	text-align: center;
+	/*background-color: #454646;*/
+	/*background-color: #737373;*/
+	background: url(/assets/footer-dark.gif) 0 0;
+	color: white;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+

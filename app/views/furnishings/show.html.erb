@@ -1,0 +1,51 @@
+
+<span class="breadcrumb"><%= link_to "Furniture", { :controller => "furnishings", :action => "index" } %> > <%=h @furnishing.shape.capitalize %></span>
+<br/>
+<br/>
+<h2><%=h @furnishing.shape.capitalize %></h2>
+<div class='row'>
+  <div class='span-14'>
+    <%= link_to image_path(img_name_determiner(@furnishing.img, "zoom")), { :class=>'jqzoom', :title=>"Magnified: #{@furnishing.name}" } do %>
+      <%= image_tag(image_path(img_name_determiner(@furnishing.img)), :alt=>@furnishing.name, :class=>'gallery', :title=>@furnishing.name) %>
+    <% end %>
+  </div>
+  <div class="span-8 last">
+    <h3><%=h @furnishing.shape.capitalize %> Details</h3>
+    <%= dimensions_formatter(@furnishing.dimensions_description) %>
+    <br/>
+    <em>Please scroll down for dimensions and sizes</em>
+  </div>
+</div>
+<div class='clear'></div>
+<br/>
+<br/>
+<div class='row span-22 last'>
+  <%= range_formatter(@range) %>
+
+  <h3><%=h @furnishing.shape.capitalize %> Description</h3>
+  <p>
+    <%=h @furnishing.description %>
+  </p>
+  <div class='span-10 append-3'>
+    <h3>Sizing and materials</h3>
+    <p>
+      Every piece of furniture we make is <strong>Handmade to Order</strong>, using traditional methods and materials. This enables us to offer a very versatile product, thereby offering maximum comfort to our customers.<br/>
+      Within certain constraints we can alter:
+
+      <%= dimensions_formatter(@furnishing.alter) %>
+
+      <!-- On all our designs we offer a choice of either cushion backs or sprung backs, for example you can have a sprung back or just have cushions on the back instead.
+      At floor level we offer the following choices on all designs: -->
+    </p>
+  </div>
+  <div class='dimensions span-9 last'>
+    <span class='small prepend-1 last'>please click this image to see the dimensions.</span>
+    <%= link_to image_path(img_name_determiner(@furnishing.img, "dimensions")), { :class=>'lightbox', :rel=>"dimensions", :title=>"#{@furnishing.shape.capitalize} Range Dimensions" } do %>
+      <%= image_tag(image_path(img_name_determiner(@furnishing.img, "dimensions-thumb")), :alt=>"#{@furnishing.shape.capitalize} Range Dimensions", :class=>"border", :title=>"#{@furnishing.shape.capitalize} Range Dimensions") %>
+    <% end %>
+  </div>
+</div>
+
+
+
+

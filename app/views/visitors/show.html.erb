@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @visitor.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @visitor.email %>
+</p>
+
+<p>
+  <b>Telephone:</b>
+  <%= @visitor.telephone %>
+</p>
+
+<p>
+  <b>Postcode:</b>
+  <%= @visitor.postcode %>
+</p>
+
+<p>
+  <b>Heard from:</b>
+  <%= @visitor.heard_from %>
+</p>
+
+<p>
+  <b>Message:</b>
+  <%= @visitor.message %>
+</p>
+
+
+<%= link_to 'Edit', edit_visitor_path(@visitor) %> |
+<%= link_to 'Back', visitors_path %>

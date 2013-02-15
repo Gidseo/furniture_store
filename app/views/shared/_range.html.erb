@@ -1,0 +1,11 @@
+
+        <li>
+          <dl>
+            <dt><%= link_to(range.name, range) %></dt>
+            <dd>
+              <%= link_to range do %>
+                <%= image_tag(image_path(img_name_determiner(range.img, "thumb")), :alt=>range.name, :class=>'thumb', :title=>range.name) %>
+              <% end %>
+            </dd>
+          </dl>
+        </li>
