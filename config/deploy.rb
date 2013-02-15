@@ -1,5 +1,5 @@
-require 'capistrano/ext/multistage'
 require "bundler/capistrano"
+require 'capistrano/ext/multistage'
 require 'capistrano_colors'
 
 set :stages, %w(balmain_demo production)
