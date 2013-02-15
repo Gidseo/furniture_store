@@ -26,7 +26,7 @@ gem 'jquery-rails'
 group :development do
   gem 'capistrano'
   gem 'capistrano-ext'
-  gem 'capistrano-colors'
+  gem 'capistrano_colors'
   gem 'sqlite3'
 end
 
