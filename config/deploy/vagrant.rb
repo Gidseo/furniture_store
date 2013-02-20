@@ -11,3 +11,6 @@ set :env, "vagrant"
 set :rails_env, "vagrant"
 
 
+# Thin web server configuration
+set :thin_config, "#{current_path}/config/thin/vagrant.yml"
+set :thin_pid_dir, "#{shared_path}/pids"

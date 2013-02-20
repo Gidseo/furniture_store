@@ -8,6 +8,7 @@ set :scm, :git
 # set :repository,  "http://www.emson.co.uk/balmainweb/trunk/"
 set :repository,  "git@github.com:emson/furniture_store.git"
 set :deploy_to, '/var/www/balmainweb/'
+set :bundle_cmd, "bundle"
 
 ssh_options[:keys] = ["#{ENV['HOME']}/.ssh/clients.pem"]
 
