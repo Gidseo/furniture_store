@@ -1,6 +1,6 @@
 
 upstream <%= app_name %> {
-  server localhost:9201;
+  server  unix:/tmp/thin.0.sock;
 }
 
 server {
