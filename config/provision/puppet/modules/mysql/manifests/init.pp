@@ -12,7 +12,7 @@ class mysql::server {
 
   file { "/etc/mysql/my.cnf":
     owner => "mysql", group => "mysql",
-    source => "puppet:///mysql/my.cnf",
+    source => "puppet:///modules/mysql/my.cnf",
     #notify => Service["mysql"],
     require => Package["mysql-server"],
   }
