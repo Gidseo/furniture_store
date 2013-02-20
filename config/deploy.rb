@@ -28,14 +28,10 @@ set :use_sudo, false
 # OVERRIDE TASKS
 # =============================================================================
 
-after "deploy:create_symlink", "deploy:symlink_shared"
+after "deploy:create_symlink", "deploy:symlink_shared", "thin:restart"
 
 namespace :deploy do
 
-  desc "Restart Passenger"
-  task :restart, :roles => :app do
-    run "touch #{current_path}/tmp/restart.txt"
-  end
 
   desc "Create a database"
   task :create_db, :roles => :db do
@@ -53,6 +49,24 @@ namespace :deploy do
     # run "tail -f #{current_path}/log/#{rails_env}.log"
     run "tail -f #{current_path}/log/#{rails_env}.log"
   end
+end
+
+# Thin start / stop / reset
+namespace :thin do
+  task :stop, :roles => :app do
+    run "cd #{current_path} && #{bundle_cmd} exec thin stop -s 1 -C #{thin_config} -R config.ru --socket /tmp/thin.sock"
+  end
+
+  task :start, :roles => :app do
+    run "cd #{current_path} && #{bundle_cmd} exec thin start -s 1 -C #{thin_config} -R config.ru --socket /tmp/thin.sock"
+  end
+
+  task :restart, :roles => :app do
+    stop
+    sleep 5
+    start
+  end
+
 end
 
 
