@@ -36,7 +36,7 @@ namespace :deploy do
 
   desc "Create a database"
   task :create_db, :roles => :db do
-    run "cd #{current_path};bundle exec rake db:create RAILS_ENV=#{rails_env};bundle exec rake db:migrate RAILS_ENV=#{rails_env}"
+    run "cd #{current_path};bundle exec rake db:create RAILS_ENV=#{rails_env}"
   end
 
   desc "Create app specific symlinks e.g. database.yml"
