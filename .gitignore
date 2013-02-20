@@ -18,3 +18,8 @@
 .DS_Store
 
 database.yml
+.vagrant
+
+settings.csv
+users.csv
+

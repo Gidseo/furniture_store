@@ -1,0 +1,5 @@
+app_name,app_name
+base_dir,/var/www/
+app_dir,/var/www/app_name/
+email_account,my_name@somewhere.com
+email_password,email_password

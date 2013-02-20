@@ -1,0 +1,3 @@
+create database <%= settings::db_name %>;
+grant all on <%= settings::db_name %>.* to '<%= settings::db_user %>'@'localhost' identified by '<%= settings::db_password %>';
+
