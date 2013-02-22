@@ -17,13 +17,7 @@ set :deploy_via, :export
 
 # saves space by only keeping last 3 when running cleanup
 set :keep_releases, 3
-
-# additional settings
-default_run_options[:pty] = true  # Forgo errors when deploying from windows
-#ssh_options[:keys] = %w(/Path/To/id_rsa)            # If you are using ssh_keys
-set :chmod755, "app config db lib public vendor script script/* public/disp*"
-set :use_sudo, false
-
+set :normalize_asset_timestamps, false
 
 # =============================================================================
 # OVERRIDE TASKS

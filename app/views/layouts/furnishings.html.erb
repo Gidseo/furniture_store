@@ -6,14 +6,7 @@
   	<title><%= page_title(@furnishing) %></title>
 
 
-    <%= stylesheet_link_tag 'screen', :media => "screen, projection" %>
-    <%= stylesheet_link_tag 'print', :media => "print" %>
-    <!--[if IE]>
-      <%= stylesheet_link_tag 'ie', :media => "screen, projection" %>
-    <![endif]-->
-    <%= stylesheet_link_tag 'main', :media => "all" %>
-    <%= stylesheet_link_tag 'lightbox', :media => "all" %>
-    <%= stylesheet_link_tag 'jquery.jqzoom', :media => "all" %>
+    <%= stylesheet_link_tag 'application', :media => "all" %>
   	<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js", "jquery.jqzoom-core-pack.js", "jquery.lightbox.js", "application.js" -%>
 
     <%= render :partial => "shared/analytics" %>
