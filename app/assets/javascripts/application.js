@@ -12,5 +12,4 @@
 //
 //= require jquery.nivo.slider.js
 //= require jquery.jqzoom-core-pack.js
-//= require jquery.lightbox.js
 //= require main.js
