@@ -12,5 +12,5 @@ set :rails_env, "staging"
 
 
 # Thin web server configuration
-set :thin_config, "#{current_path}/config/thin/vagrant.yml"
+set :thin_config, "#{current_path}/config/thin/staging.yml"
 set :thin_pid_dir, "#{shared_path}/pids"
