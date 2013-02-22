@@ -6,7 +6,7 @@
   </p>
 <h3 class="prepend-2">Balmain &amp; Balmain Contact Information.</h3>
 
-<div class='col prepend-2 span-9 append-2'>
+<div class='col prepend-1 span-10 append-2'>
   <div class="clear"></div>
 
   <%- if notice %>
@@ -28,14 +28,14 @@
       <%= f.label(:email, "*Email: ") %>
     </div>
     <div class='span-6 last'>
-      <%= f.text_field :email %><br/>
+      <%= f.text_field(:email, :type => 'email') %><br/>
     </div>
     <div class='clear'></div>
     <div class='span-3'>
       <%= f.label(:telephone, "Telephone: ") %>
     </div>
     <div class='span-6 last'>
-      <%= f.text_field :telephone %><br/>
+      <%= f.text_field(:telephone, :type => 'tel') %><br/>
     </div>
     <div class='clear'></div>
     <div class='span-3'>
@@ -79,33 +79,45 @@
   <% end %>
 </div>
 
-<div class='contact col span-7 last'>
-  <br/>
-  <br/>
-  <address>
-    Balmain &amp; Balmain<br/>
-    Charlton Horethorne<br/>
-    Dorset<br/>
-    United Kingdom<br/>
-    DT9 4NG
-  </address>
-  <ul>
-    <li>Tel: +44(0)1963 220247</li>
-    <li>Fax: +44(0)1963 220580</li>
-    <li><%= mail_to "mail@balmainandbalmain.com", "mail@balmainandbalmain.com", :encode => "hex" %></li>
-  </ul>
-  
-  <br/>
-  <address>
-    Balmain &amp; Balmain<br/>
-    Wilton<br/>
-    Marlborough<br/>
-    Wiltshire<br/>
-    United Kingdom<br/>
-    SN8 3SP
-  </address>
-  <ul>
-    <li>Tel: +44(0)1672 870414</li>
-  </ul>
-  
+<div class='contact col span-8 last'>
+  <div class="vcard">
+    <p>
+      <div class="adr">
+        <span class="fn" style="float;left;">???</span><br/>
+        <span class="organization-name">Balmain &amp; Balmain Furniture Makers</span><br/>
+        <span class="locality">Charlton Horethorne</span><br/>
+        <span class="region">Dorset</span><br/>
+        <span class="postal-code">DT9 4NG</span><br/>
+        <span class="country">UK</span><br/>
+      </div>
+      <div class="contact">
+        <span class="tel">01963 220247</span> 
+        <%= mail_to("mail@balmainandbalmain.com", "mail@balmainandbalmain.com", :encode => "hex", :class => "email", :subject => "Furniture Enquiry") %>
+      </div>
+      <%= link_to image_path('furniture-sherborne.png'), { :class=>'lightbox gallery', :rel=>"location", :title=>"Balmain office Sherborne" } do %>
+        <%= image_tag(image_path('furniture-sherborne-t.png'), :alt=>"Balmain office Sherborne", :class=>"border", :title=>"Balmain office Sherborne") %>
+      <% end %>
+    </p>
+    <p>
+      <div class="vcard">
+        <div class="adr">
+          <span class="fn" style="float;left;">???</span><br/>
+          <span class="organization-name">Balmain &amp; Balmain Furniture Makers</span><br/>
+          <span class="street-address">Wilton</span><br/>
+          <span class="locality">Marlborough</span><br/>
+          <span class="region">Wiltshire</span><br/>
+          <span class="postal-code">SN8 3SP</span><br/>
+          <span class="country">UK</span><br/>
+        </div>
+        <div class="contact">
+          <span class="tel">01672 870414</span> 
+          <%= mail_to("mail@balmainandbalmain.com", "mail@balmainandbalmain.com", :encode => "hex", :class => "email", :subject => "Furniture Enquiry") %>
+        </div>
+      </div>
+      <%= link_to image_path('furniture-wilton.png'), { :class=>'lightbox gallery', :rel=>"location", :title=>"Balmain office Wilton" } do %>
+        <%= image_tag(image_path('furniture-wilton-t.png'), :alt=>"Balmain office Wilton", :class=>"border", :title=>"Balmain office Wilton") %>
+      <% end %>
+    </p>
+  </div>
+
 </div>

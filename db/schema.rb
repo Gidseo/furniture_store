@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(:version => 20130214090633) do
     t.string   "shape"
     t.float    "seats"
     t.boolean  "is_main",                :default => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
   end
 
   create_table "visitors", :force => true do |t|

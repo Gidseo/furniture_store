@@ -3,7 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  	<title>Traditional Handmade Sofas, Chairs &amp; Armchairs - Balmain &amp; Balmain</title>
+    <meta name="msvalidate.01" content="545F54DFB0159CAA87009F55ED40F2EB" />
+  	<title>Traditional Handmade Sofas, Chairs &amp; Armchairs - Balmain &amp; Balmain <%= page_name() %></title>
 
 
     <%= stylesheet_link_tag 'screen', :media => "screen, projection" %>
@@ -18,7 +19,7 @@
   	<%= javascript_include_tag "jquery.flow.1.0.js" %>
   	<%= javascript_include_tag "application.js" %>
 
-
+    <%= render :partial => "shared/analytics" %>
   </head>
 
   <body>
@@ -47,17 +48,6 @@
       <%= render(:partial => 'shared/footer') -%>
 
     </div><!-- End: page -->
-
-    <!-- GoogleAnalytics -->
-    <script type="text/javascript">
-    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-    </script>
-    <script type="text/javascript">
-    try {
-    var pageTracker = _gat._getTracker("UA-11370325-1");
-    pageTracker._trackPageview();
-    } catch(err) {}</script>
 
   </body>
 </html>
