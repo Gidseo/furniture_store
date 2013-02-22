@@ -11,4 +11,5 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery.nivo.slider.js
+//= require jquery.jqzoom-core-pack.js
 //= require main.js
