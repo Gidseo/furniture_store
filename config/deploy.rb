@@ -2,7 +2,7 @@ require "bundler/capistrano"
 require 'capistrano/ext/multistage'
 require 'capistrano_colors'
 
-set :stages, %w(vagrant balmain_demo production)
+set :stages, %w(vagrant staging production)
 
 set :scm, :git
 # set :repository,  "http://www.emson.co.uk/balmainweb/trunk/"
