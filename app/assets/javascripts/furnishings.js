@@ -12,3 +12,4 @@
 //
 //= require ./furnishings/jquery.jqzoom-core-pack.js
 //= require ./furnishings/jquery.lightbox.js
+//= require main.js
