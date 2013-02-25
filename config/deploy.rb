@@ -41,7 +41,7 @@ namespace :deploy do
 
   desc "Create a database"
   task :create_db, :roles => :db do
-    run "cd #{release_path};RAILS_ENV=#{rails_env} bundle exec rake db:create"
+    run "cd #{current_path};RAILS_ENV=#{rails_env} bundle exec rake db:create"
   end
 
   desc "Create app specific symlinks e.g. database.yml"
@@ -50,23 +50,31 @@ namespace :deploy do
     run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
   end
 
-  desc "Tail server log"
+  desc "Tail rails server log"
   task :log do
-    # run "tail -f #{current_path}/log/#{rails_env}.log"
     run "tail -f #{current_path}/log/#{rails_env}.log"
   end
 end
 
 # Thin start / stop / reset
 namespace :thin do
+
+  desc "Tail thin server log"
+  task :log do
+    run "tail -f #{current_path}/log/thin.0.log"
+  end
+
+  desc "Stop thin server"
   task :stop, :roles => :app do
     run "cd #{current_path} && #{bundle_cmd} exec thin stop -s 1 -C #{thin_config} -R config.ru --socket /tmp/thin.sock"
   end
 
+  desc "Start thin server"
   task :start, :roles => :app do
     run "cd #{current_path} && #{bundle_cmd} exec thin start -s 1 -C #{thin_config} -R config.ru --socket /tmp/thin.sock"
   end
 
+  desc "Restart thin server"
   task :restart, :roles => :app do
     stop
     sleep 5
