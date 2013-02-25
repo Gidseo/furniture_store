@@ -19,8 +19,8 @@ module FurnishingsHelper
 
 
   def page_title(furnishing)
-    name = " Furniture"
-    name = ": #{furnishing.shape.capitalize}" unless furnishing.nil?
+    name = "Furniture"
+    name = "#{furnishing.shape.capitalize}" unless furnishing.nil?
     "Balmain & Balmain - #{name}"
   end
 

@@ -36,12 +36,12 @@ namespace :deploy do
 
   desc "Compile assets on server"
   task :compile_assets do
-    run "cd #{current_path};RAILS_ENV=#{rails_env} bundle exec rake assets:precompile"
+    run "cd #{release_path};RAILS_ENV=#{rails_env} bundle exec rake assets:precompile"
   end
 
   desc "Create a database"
   task :create_db, :roles => :db do
-    run "cd #{current_path};RAILS_ENV=#{rails_env} bundle exec rake db:create"
+    run "cd #{release_path};RAILS_ENV=#{rails_env} bundle exec rake db:create"
   end
 
   desc "Create app specific symlinks e.g. database.yml"
