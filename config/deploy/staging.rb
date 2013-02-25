@@ -15,7 +15,6 @@ set :rails_env, "staging"
 set :thin_config, "#{current_path}/config/thin/staging.yml"
 set :thin_pid_dir, "#{shared_path}/pids"
 
-after 'deploy:update_code' do
-  run "cd #{release_path}; RAILS_ENV=#{rails_env} rake assets:precompile"
-end
+after 'deploy:update_code', 'deploy:compile_assets'
+
 

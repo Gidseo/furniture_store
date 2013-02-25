@@ -18,3 +18,8 @@ role :web, domain
 role :app, domain
 role :db,  domain, :primary => true
 
+
+
+# TODO UPDATE THIS BASED ON STAGING
+
+
