@@ -1,25 +1,22 @@
-server 'balmainandbalmain.com', :app
+# server 'balmainandbalmain.com', :app
 
-set :user, 'balmainuser'
-set :env, 'production'
-set :rails_env, 'production'
+server '54.228.217.35', :app
+server '54.228.217.35', :db, :primary => true
 
-set :domain, 'balmainandbalmain.com'  # Dreamhost servername where your 
-set :application, 'balmainandbalmain.com'  # Your app's location (domain or sub-domain name as setup in panel)
-set :applicationdir, "/home/#{user}/#{application}/www"  # The standard Dreamhost setup
-
-# set :bundle_dir, '/home/emodemo/.gems/gems/bundler-1.0.21/'
-# set :bundle_dir, '/home/balmainuser/.gems/bin/bundle'
-
-set :deploy_to, applicationdir
-
-# roles (servers)
-role :web, domain
-role :app, domain
-role :db,  domain, :primary => true
+# To SSH into vagrant as user balmainweb:
+# # ssh balmainweb@localhost -p 2222 -i ~/.ssh/clients.pem 
+set :user, "balmainweb"
+set :user_key, "#{ENV['HOME']}/.ssh/clients.pem"
+set :sudo_user, "ubuntu"
+set :sudo_user_key, "#{ENV['HOME']}/.ssh/clients.pem"
+set :env, "production"
+set :rails_env, "production"
 
 
+# Thin web server configuration
+set :thin_config, "#{current_path}/config/thin/production.yml"
+set :thin_pid_dir, "#{shared_path}/pids"
 
-# TODO UPDATE THIS BASED ON STAGING
+after 'deploy:update_code', 'deploy:compile_assets'
 
 
