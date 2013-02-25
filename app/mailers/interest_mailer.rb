@@ -1,8 +1,8 @@
 class InterestMailer < ActionMailer::Base
-  default from: "mail@emson.co.uk"
+  default from: "do-not-reply@balmainandbalmain.com"
 
   def interest_email(visitor)
     @visitor = visitor
-    mail(:to => 'ben@emson.co.uk', :subject => "Visitor interest notification: #{@visitor.name}")
+    mail(:to => 'mail@balmainandbalmain.com', :subject => "Visitor interest notification: #{@visitor.name}")
   end
 end

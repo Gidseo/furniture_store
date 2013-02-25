@@ -71,7 +71,7 @@ FurnitureStore::Application.configure do
   config.action_mailer.smtp_settings = {
     :address              => "email-smtp.us-east-1.amazonaws.com",
     :port                 => 587,
-    :domain               => "touchbaseconf.com",
+    :domain               => "balmainandbalmain.com",
     :user_name            => "AKIAJ5PPMHJTIX3E2B3A",
     :password             => "AuHUuCk2ppUlrBSG1g0G9BDxU0YKFsB4648mr9b2YC8x",
     :authentication       => :login,
