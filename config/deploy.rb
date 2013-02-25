@@ -78,7 +78,7 @@ end
 
 # Puppet provisioning scripts
 
-before 'puppet:bootstrap', 'puppet:prerequisites', 'puppet:update_server'
+before 'puppet:bootstrap', 'puppet:update_server', 'puppet:prerequisites'
 before 'puppet:apply', 'puppet:dir_copy'
 before 'puppet:provision', 'puppet:bootstrap', 'puppet:apply'
 
