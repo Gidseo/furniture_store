@@ -36,19 +36,18 @@ a:hover {
 }
 
 h2 {
-	font-size: 1.7em;
+	font-size: 1.4em;
 	letter-spacing: 0.01em;
-	font-weight: bold;
 }
 
 h3 {
-	font-size: 1.4em;
+	font-size: 1.2em;
 	letter-spacing: 0.01em;
 }
 
 
 h1, h2, h3, h4 {
-	color: #103f76;
+	color: #525141;
 	margin: 0;
 }
 
